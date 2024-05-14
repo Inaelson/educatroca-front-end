@@ -2,6 +2,10 @@ body {
     background: #EEE url(../images/background-dotted.png) repeat;
 }
 
+a {
+    text-decoration: none;
+}
+
 #header-style {
     background: #A91D3A;
 }
@@ -13,32 +17,43 @@ body {
 
 
 /*------------------Content-------------------*/
-#login-box {
+.box-middle {
     background: #fff;
     border-radius: 10px;
+}
+
+.box-middle button {
+    background: #b81838;
+    display: block;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    margin: 0 auto;
+}
+
+.box-middle button:hover {
+    background: #A91D3A;
+    color: #fff;
+}
+
+#login-box {
+    text-align: center;
     padding: 30px 80px;
+}
+
+#signup-box {
+    padding: 30px 30px;
     text-align: center;
 }
 
-#login-box button {
-    background: #b81838;
-    color: #fff;
-    border-radius: 20px;
-    width: 89px;
-    font-size: 0.9em;
+#signup-fields div{
+    margin: 15px 0;
 }
 
-#login-box button:hover {
-    background: #A91D3A;
-}
-
-#login-box span{
+#signup-box > span, #login-box span{
     display: block;
     font-size: 0.8em;
-}
-
-#login-box span a {
-    text-decoration: none;
 }
 
 /*---------------Footer---------------*/
@@ -58,7 +73,6 @@ body {
 }
 
 #links a {
-    text-decoration: none;
     color: #000;
 }
 
