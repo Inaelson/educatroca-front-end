@@ -36,15 +36,15 @@
             <div class="mt-4 mb-4" id="signup-fields">
               <div class="input-group">
                 <span class="input-group-text">Nome:</span>
-                <input id="firstName" class="form-control" type="text" placeholder="Insira seu nome">
+                <input id="firstName" class="form-control clear" type="text" placeholder="Insira seu nome">
               </div>
               <div class="input-group">
                 <span class="input-group-text">Sobrenome:</span>
-                <input id="lastName" class="form-control" type="text" placeholder="Insira seu sobrenome">
+                <input id="lastName" class="form-control clear" type="text" placeholder="Insira seu sobrenome">
               </div>
               <div class="input-group">
                 <span class="input-group-text">Curso/Área de Interesse:</span>
-                <select id="course" class="form-select">
+                <select id="course" class="form-select clear">
                   <option selected>Escolha uma opção</option>
                   <option>Bacharelado em Tecnologia da Informação</option>
                   <option>Bacharelado em Ciência de Dados</option>
@@ -53,11 +53,11 @@
               </div>
               <div class="input-group">
                 <span class="input-group-text">Email:</span>
-                <input id="email" class="form-control" type="email" placeholder="example@email.com">
+                <input id="email" class="form-control clear" type="email" placeholder="example@email.com">
               </div>
               <div class="input-group">
                 <span class="input-group-text">Senha:</span>
-                <input id="password" class="form-control" type="password" placeholder="Insira sua senha">
+                <input id="password" class="form-control clear" type="password" placeholder="Insira sua senha">
               </div>
             </div>
             <button type="button" class="btn" onclick="register()" id="registerButton">Realizar Cadastro</button>
@@ -120,7 +120,8 @@
         .then(data => {
           alert('Cadastro realizado com sucesso!')
           console.log('Success:', data);
-          // Handle success case
+          const inputsToClear = document.querySelectorAll('.clear');
+          inputsToClear.forEach(input => input.value = '');
         })
         .catch((error) => {
           console.error('Error:', error);
