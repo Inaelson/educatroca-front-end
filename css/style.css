@@ -87,7 +87,7 @@ a {
     border-radius: 10px;
 }
 
-.box-middle button {
+.box-middle .button-middle{
     background: #b81838;
     display: block;
     color: #fff;
@@ -97,7 +97,7 @@ a {
     margin: 0 auto;
 }
 
-.box-middle button:hover {
+.box-middle .button-middle:hover {
     background: #A91D3A;
     color: #fff;
 }
@@ -119,6 +119,16 @@ a {
 #signup-box > span, #login-box span{
     display: block;
     font-size: 0.8em;
+}
+
+#signup-fields .invalid-feedback {
+    text-align: start;
+    padding: 0;
+    margin: 5px 0;
+}
+
+#loginErrorAlert {
+    display: none;
 }
 
 /*---------------Footer---------------*/
@@ -191,15 +201,15 @@ h1 {
 
 /*----------------Contrast----------------- */
 
-body.contrast, body.contrast #header-style, body.contrast .box-middle, body.contrast .box-middle button, body.contrast #footer-style, body.contrast h1, body.contrast a, body.contrast #links a {
+body.contrast, body.contrast #header-style, body.contrast .box-middle, body.contrast .box-middle .button-middle, body.contrast #footer-style, body.contrast h1, body.contrast a, body.contrast #links a, body.contrast .invalid-feedback {
     color: #fff;
     background-color: #000;
 }
 
-body.contrast .box-middle button {
+body.contrast .box-middle .button-middle {
     border: 1px solid white;
 }
 
-body.contrast .box-middle button:hover, body.contrast a:hover, body.contrast #links a:hover, body.contrast #help-text:hover {
+body.contrast .box-middle button:hover, body.contrast a:hover, body.contrast #links a:hover, body.contrast #help-text:hover, body.contrast .invalid-feedback {
     color: #bbb;
 }

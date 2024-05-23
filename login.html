@@ -60,13 +60,17 @@
           <div class="col-11 col-lg-5">
             <div id="login-box" class="box-middle">
               <h1>Acesse sua conta</h1>
+              <div id="loginErrorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Usuário e/ou senha</strong> inválidos.
+                <button type="button" class="btn-close" onclick="hideAlert()" aria-label="Close"></button>
+              </div>
               <div class="mt-4 mb-4">
                 <label for="email" class="form-label">Email:</label>
-                <input id="email" class="form-control" type="email" placeholder="example@email.com">
+                <input id="email" class="form-control loginFields" onblur="verifyFields()" type="email" placeholder="example@email.com">
                 <label for="password" class="form-label mt-2">Senha:</label>
-                <input id="password" class="form-control" type="password" placeholder="Insira sua senha">
+                <input id="password" class="form-control loginFields" type="password" placeholder="Insira sua senha">
               </div>
-              <button type="button" class="btn" onclick="login()">Entrar</button>
+              <button type="button" class="btn button-middle" onclick="login()">Entrar</button>
               <span class="mt-4">Não possui cadastro? <a href="signup.html">Inscreva-se</a>.</span>
             </div>
           </div>
@@ -101,34 +105,6 @@
 
 
     <!-- Custom JS -->
-
-  <script>
-    function login() {
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      fetch(`http://localhost:8080/educatroca/${email}`)
-        .then(response => response.json())
-        .then(data => {
-          if (data.length === 0) {
-            alert('Usuário não encontrado');
-          } else {
-            const person = data;
-            if (person.password === password) {
-              alert('Login bem-sucedido');
-              // Redirecionar para outra página ou realizar outra ação
-            } else {
-              alert('Senha incorreta');
-            }
-          }
-        })
-        .catch(error => {
-          console.error('Erro:', error)
-          alert('Usuário não encontrado');
-        });
-    }
-  </script>
-
   <script src="js/main.js"></script>
 
 </body>
