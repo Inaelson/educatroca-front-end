@@ -1,23 +1,88 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background: #EEE url(../images/background-dotted.png) repeat;
+    font-size: 16px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+body > #page {
+    flex: 1;
 }
 
 a {
     text-decoration: none;
 }
 
+.icon {
+    color: #fff;
+    font-size: 1.875em;
+    width: 50px;
+    height: 45px;
+    text-align:center;
+    padding-top: 8px;
+}
+
+#page {
+    position: relative;
+    min-height: 100%;
+}
+
+/*-------------------Header-------------- */
+
 #header-style {
     background: #A91D3A;
 }
 
-.icon {
-    color: #fff;
-    font-size: 1.875em;
+#header-style .icon {
+    font-size: 30px;
+    padding-left: 5px;
 }
 
+#header-style button{
+    background: #fff;
+    color: #000;
+    margin: 0 5px;
+}
+
+#main-nav a{
+    color: #fff;
+    padding: 0 15px;
+}
+
+#main-nav a:hover {
+    color: #ddd;
+}
+
+#accessibility-menu {
+    height: 38px;
+}
+
+#accessibility-menu button {
+    width: 50px;
+    height: 38px;
+    padding: 0;
+}
+
+#accessibility-menu .first-icon {
+    font-size: 1.0em
+}
+#accessibility-menu .second-icon {
+    font-size: 0.6em
+}
 
 /*------------------Content-------------------*/
 .box-middle {
+    margin-top: 40%;
     background: #fff;
     border-radius: 10px;
 }
@@ -59,6 +124,7 @@ a {
 /*---------------Footer---------------*/
 
 #footer-style{
+    margin-top: 20%;
     background: #bbb;
 }
 
@@ -89,7 +155,7 @@ a {
 /* Typography */
 
 h1 {
-    font-size: 36px;
+    font-size: 2.25em;
     color: #000;
 }
 
@@ -100,6 +166,10 @@ h1 {
 @media (max-width: 575.98px) {
     #help {
         margin-left: 20px;
+    }
+    #main-nav {
+        margin: 10px 0px;
+
     }
 }
 
@@ -114,3 +184,22 @@ h1 {
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {}
+
+
+
+
+
+/*----------------Contrast----------------- */
+
+body.contrast, body.contrast #header-style, body.contrast .box-middle, body.contrast .box-middle button, body.contrast #footer-style, body.contrast h1, body.contrast a, body.contrast #links a {
+    color: #fff;
+    background-color: #000;
+}
+
+body.contrast .box-middle button {
+    border: 1px solid white;
+}
+
+body.contrast .box-middle button:hover, body.contrast a:hover, body.contrast #links a:hover, body.contrast #help-text:hover {
+    color: #bbb;
+}

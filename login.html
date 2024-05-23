@@ -18,59 +18,89 @@
 </head>
 
 <body>
-  <header id="header-style">
-    <nav class="navbar navbar-expand-md">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img src="images/logo.png" width="234" alt="EducaTroca"></a>
-        <a class="ms-auto icon" href=""><i class="fa-solid fa-universal-access"></i></a>
-      </div>
-    </nav>
-  </header>
+  <div id="page">
+    <header id="header-style">
+      <nav class="navbar navbar-expand-sm">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="234" alt="EducaTroca"></a>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
+          <div class="navbar-collapse collapse" id="main-nav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
+              </li>
+              <div class="d-none d-sm-inline vr"></div>
+              <li class="nav-item">
+                <a href="signup.html" class="nav-link">Cadastro</a>
+              </li>
+              <div class="d-none d-sm-inline vr"></div>
+            </ul>
+          </div>
+          <span class="ms-auto" data-bs-toggle="collapse" data-bs-target="#accessibility-menu" aria-expanded="false"><i class="fa-solid fa-universal-access icon"></i></span>
+          <div id="accessibility-menu" class="collapse collapse-horizontal">
+                <button class="btn" type="button" onclick="increaseFont()">
+                  <i class="fa-solid fa-font first-icon"></i>
+                  <i class="fa-solid fa-plus second-icon"></i>
+                </button>
+                <button class="btn" type="button" onclick="decreaseFont()">
+                  <i class="fa-solid fa-font first-icon"></i>
+                  <i class="fa-solid fa-minus second-icon"></i>
+                </button>
+                <button class="btn" type="button" onclick="applyContrast()">
+                  <i class="fa-solid fa-circle-half-stroke first-icon"></i>
+                </button>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-  <section id="content">
-    <div class="container">
-      <div class="row">
-        <div class="col-11 col-lg-5 position-absolute top-50 start-50 translate-middle">
-          <div id="login-box" class="box-middle">
-            <h1>Acesse sua conta</h1>
-            <div class="mt-4 mb-4">
-              <label for="email" class="form-label">Email:</label>
-              <input id="email" class="form-control" type="email" placeholder="example@email.com">
-              <label for="password" class="form-label mt-2">Senha:</label>
-              <input id="password" class="form-control" type="password" placeholder="Insira sua senha">
+    <section id="content">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-11 col-lg-5">
+            <div id="login-box" class="box-middle">
+              <h1>Acesse sua conta</h1>
+              <div class="mt-4 mb-4">
+                <label for="email" class="form-label">Email:</label>
+                <input id="email" class="form-control" type="email" placeholder="example@email.com">
+                <label for="password" class="form-label mt-2">Senha:</label>
+                <input id="password" class="form-control" type="password" placeholder="Insira sua senha">
+              </div>
+              <button type="button" class="btn" onclick="login()">Entrar</button>
+              <span class="mt-4">Não possui cadastro? <a href="signup.html">Inscreva-se</a>.</span>
             </div>
-            <button type="button" class="btn" onclick="login()">Entrar</button>
-            <span class="mt-4">Não possui cadastro? <a href="#">Inscreva-se</a>.</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer id="footer-style" class="fixed-bottom">
-    <div class="container">
-      <div class="row d-flex">
-        <div id="links" class="col-12 col-md-5">
-          <h5>Links úteis</h5>
-          <ul>
-            <li><a href="">Univesp</a></li>
-            <li><a href="">Portal do Aluno</a></li>
-          </ul>
-        </div>
-        <div class="col-1 ms-md-auto align-self-center" id="help">
-          <a href="">
-            <i class="fa-solid fa-circle-question icon"></i>
-            <span id="help-text">Ajuda</span>
-          </a>
+    <footer id="footer-style">
+      <div class="container">
+        <div class="row d-flex">
+          <div id="links" class="col-12 col-md-5">
+            <h5>Links úteis</h5>
+            <ul>
+              <li><a href="">Univesp</a></li>
+              <li><a href="">Portal do Aluno</a></li>
+            </ul>
+          </div>
+          <div class="col-1 ms-md-auto align-self-center" id="help">
+            <a href="">
+              <i class="fa-solid fa-circle-question icon"></i>
+              <span id="help-text">Ajuda</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
   <!--Bootstrap Js-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+
+    <!-- Custom JS -->
 
   <script>
     function login() {
@@ -98,6 +128,9 @@
         });
     }
   </script>
+
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
