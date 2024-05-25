@@ -10,7 +10,9 @@ var defaultFont = 17
 
 function increaseFont() {
     body.style.fontSize = (defaultFont + 'px')
-     return defaultFont++
+    if (defaultFont <= 19){
+      return defaultFont++
+   }
 }
 
 function decreaseFont() {
@@ -57,6 +59,11 @@ function hideAlert(){
     })
   })()
 
+// Homepage functions
+
+
+
+
 // Integrate with api
 
 
@@ -75,7 +82,7 @@ function login() {
             alert('Login bem-sucedido');
             // Redirecionar para outra página ou realizar outra ação
           } else {
-            alert('Senha incorreta');
+            errorLogin();
           }
         }
       })

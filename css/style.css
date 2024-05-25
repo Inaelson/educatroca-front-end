@@ -30,6 +30,7 @@ a {
     height: 45px;
     text-align:center;
     padding-top: 8px;
+    cursor: pointer;
 }
 
 #page {
@@ -81,25 +82,41 @@ a {
 }
 
 /*------------------Content-------------------*/
+#content {
+    min-height: 720px;
+}
+
+
 .box-middle {
     margin-top: 40%;
     background: #fff;
     border-radius: 10px;
 }
 
-.box-middle .button-middle{
+.button-style {
     background: #b81838;
-    display: block;
     color: #fff;
     border-radius: 20px;
     padding: 10px 20px;
     font-size: 0.9em;
+}
+
+.button-style:hover {
+    background: #A91D3A;
+    color: #fff;
+}
+
+.button-style-w {
+    width: 120px;
+}
+
+.box-middle .button-middle{
+    display: block;
     margin: 0 auto;
 }
 
-.box-middle .button-middle:hover {
-    background: #A91D3A;
-    color: #fff;
+#close-button{
+    background: #bbb;
 }
 
 #login-box {
@@ -131,11 +148,69 @@ a {
     display: none;
 }
 
+.structure-content{
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.post-icon{
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.post-icon:hover{
+    color: #555;
+}
+
+.post-content{
+    text-align: justify;
+    padding: 0 12px 10px 30px;
+}
+
+#post-area{
+    height: 160px;
+}
+
+#post-create textarea{
+    resize: none;
+    height: 90px;
+    width: 100%;
+}
+
+.profile-pic-post{
+    padding: 0;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#profile-pic-card{
+    margin-top: 30px;
+    font-size: 6em;
+    text-align: center;
+}
+
+#profile-info{
+    margin: 50px 0 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#profile-card {
+    max-height: 350px;
+}
+
+#post-user {
+    display: none;
+}
+
 /*---------------Footer---------------*/
 
 #footer-style{
     margin-top: 20%;
     background: #bbb;
+    width: 100%;
 }
 
 #links {
@@ -201,12 +276,12 @@ h1 {
 
 /*----------------Contrast----------------- */
 
-body.contrast, body.contrast #header-style, body.contrast .box-middle, body.contrast .box-middle .button-middle, body.contrast #footer-style, body.contrast h1, body.contrast a, body.contrast #links a, body.contrast .invalid-feedback {
+body.contrast, body.contrast #header-style, body.contrast .box-middle, body.contrast .box-middle .button-middle, body.contrast .button-style, body.contrast #footer-style, body.contrast h1, body.contrast a, body.contrast #links a, body.contrast .invalid-feedback, body.contrast .structure-content{
     color: #fff;
     background-color: #000;
 }
 
-body.contrast .box-middle .button-middle {
+body.contrast .button-style {
     border: 1px solid white;
 }
 
