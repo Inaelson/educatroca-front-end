@@ -23,7 +23,8 @@
       <nav class="navbar navbar-expand-sm">
         <div class="container">
           <a class="navbar-brand" href="#"><img src="images/logo.png" width="234" alt="EducaTroca"></a>
-          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
           <div class="navbar-collapse collapse" id="main-nav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -36,19 +37,20 @@
               <div class="d-none d-sm-inline vr"></div>
             </ul>
           </div>
-          <span class="ms-auto" data-bs-toggle="collapse" data-bs-target="#accessibility-menu" aria-expanded="false"><i class="fa-solid fa-universal-access icon"></i></span>
+          <span class="ms-auto" data-bs-toggle="collapse" data-bs-target="#accessibility-menu" aria-expanded="false"><i
+              class="fa-solid fa-universal-access icon"></i></span>
           <div id="accessibility-menu" class="collapse collapse-horizontal">
-                <button class="btn" type="button" onclick="increaseFont()">
-                  <i class="fa-solid fa-font first-icon"></i>
-                  <i class="fa-solid fa-plus second-icon"></i>
-                </button>
-                <button class="btn" type="button" onclick="decreaseFont()">
-                  <i class="fa-solid fa-font first-icon"></i>
-                  <i class="fa-solid fa-minus second-icon"></i>
-                </button>
-                <button class="btn" type="button" onclick="applyContrast()">
-                  <i class="fa-solid fa-circle-half-stroke first-icon"></i>
-                </button>
+            <button class="btn" type="button" onclick="increaseFont()">
+              <i class="fa-solid fa-font first-icon"></i>
+              <i class="fa-solid fa-plus second-icon"></i>
+            </button>
+            <button class="btn" type="button" onclick="decreaseFont()">
+              <i class="fa-solid fa-font first-icon"></i>
+              <i class="fa-solid fa-minus second-icon"></i>
+            </button>
+            <button class="btn" type="button" onclick="applyContrast()">
+              <i class="fa-solid fa-circle-half-stroke first-icon"></i>
+            </button>
           </div>
         </div>
       </nav>
@@ -66,9 +68,12 @@
               </div>
               <div class="mt-4 mb-4">
                 <label for="email" class="form-label">Email:</label>
-                <input id="email" class="form-control loginFields" onblur="verifyFields()" type="email" placeholder="example@email.com">
+                <input id="email" class="form-control loginFields" type="email" placeholder="example@email.com">
                 <label for="password" class="form-label mt-2">Senha:</label>
                 <input id="password" class="form-control loginFields" type="password" placeholder="Insira sua senha">
+                <br />
+                <input type="checkbox" id="showPassword" onclick="togglePassword()">
+                <label>Mostrar senha</label>
               </div>
               <button type="button" class="btn button-middle button-style" onclick="login()">Entrar</button>
               <span class="mt-4">Não possui cadastro? <a href="signup.html">Inscreva-se</a>.</span>
@@ -84,8 +89,9 @@
           <div id="links" class="col-12 col-md-5">
             <h5>Links úteis</h5>
             <ul>
-              <li><a href="">Univesp</a></li>
-              <li><a href="">Portal do Aluno</a></li>
+              <li><a href="https://univesp.br/" target="_blank" rel="noopener noreferrer">Univesp</a></li>
+              <li><a href="https://sei.univesp.br/index.xhtml" target="_blank" rel="noopener noreferrer">Portal do
+                  Aluno</a></li>
             </ul>
           </div>
           <div class="col-1 ms-md-auto align-self-center" id="help">
@@ -104,7 +110,7 @@
     crossorigin="anonymous"></script>
 
 
-    <!-- Custom JS -->
+  <!-- Custom JS -->
   <script src="js/main.js"></script>
 
 </body>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EducaTroca - Login</title>
+  <title>EducaTroca - Homepage</title>
 
   <!--Bootstrap CSS-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -23,35 +23,33 @@
     <header id="header-style">
       <nav class="navbar navbar-expand-sm">
         <div class="container">
-            <!-- Logo e navegação -->
+          <!-- Logo e navegação -->
           <a class="navbar-brand" href="#"><img src="images/logo.png" width="234" alt="EducaTroca"></a>
-          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
           <div class="navbar-collapse collapse" id="main-nav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="login.html" class="nav-link">Login</a>
-              </li>
-              <div class="d-none d-sm-inline vr"></div>
-              <li class="nav-item">
-                <a href="signup.html" class="nav-link">Cadastro</a>
+                <a href="login.html" class="nav-link">Sair</a>
               </li>
               <div class="d-none d-sm-inline vr"></div>
             </ul>
           </div>
           <!-- Menu de acessibilidade -->
-          <span class="ms-auto" data-bs-toggle="collapse" data-bs-target="#accessibility-menu" aria-expanded="false"><i class="fa-solid fa-universal-access icon"></i></span>
+          <span class="ms-auto" data-bs-toggle="collapse" data-bs-target="#accessibility-menu" aria-expanded="false"><i
+              class="fa-solid fa-universal-access icon"></i></span>
           <div id="accessibility-menu" class="collapse collapse-horizontal">
-                <button class="btn" type="button" onclick="increaseFont()">
-                  <i class="fa-solid fa-font first-icon"></i>
-                  <i class="fa-solid fa-plus second-icon"></i>
-                </button>
-                <button class="btn" type="button" onclick="decreaseFont()">
-                  <i class="fa-solid fa-font first-icon"></i>
-                  <i class="fa-solid fa-minus second-icon"></i>
-                </button>
-                <button class="btn" type="button" onclick="applyContrast()">
-                  <i class="fa-solid fa-circle-half-stroke first-icon"></i>
-                </button>
+            <button class="btn" type="button" onclick="increaseFont()">
+              <i class="fa-solid fa-font first-icon"></i>
+              <i class="fa-solid fa-plus second-icon"></i>
+            </button>
+            <button class="btn" type="button" onclick="decreaseFont()">
+              <i class="fa-solid fa-font first-icon"></i>
+              <i class="fa-solid fa-minus second-icon"></i>
+            </button>
+            <button class="btn" type="button" onclick="applyContrast()">
+              <i class="fa-solid fa-circle-half-stroke first-icon"></i>
+            </button>
           </div>
         </div>
       </nav>
@@ -60,61 +58,47 @@
 
     <!-- Conteúdo -->
     <section id="content">
-        <div class="container">
-            <div class="row d-flex justify-content-between">
-                <!-- Informações de perfil -->
-                <div class="col-12 col-lg-2 structure-content" id="profile-card">
-                    <div class="d-none d-lg-block text-center mt-2">
-                        <img src="" alt="">
-                        <i class="fa-solid fa-circle-user" id="profile-pic-card"></i>
-                    </div>
-                    <ul id="profile-info">
-                        <li><strong>Nome: </strong><span id="name"></span></li>
-                        <li><strong>Curso: </strong><span id="course"></span></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <!-- Informações de perfil -->
+          <div class="col-12 col-lg-2 structure-content" id="profile-card">
+            <div class="d-none d-lg-block text-center mt-2">
+              <img src="" alt="">
+              <i class="fa-solid fa-circle-user" id="profile-pic-card"></i>
+            </div>
+            <ul id="profile-info">
+              <li><strong>Nome: </strong><span id="name"></span></li>
+              <li><strong>Curso: </strong><span id="course"></span></li>
+            </ul>
+          </div>
 
-                <!-- Área de postagem -->
-                <div class="col-12 col-lg-9">
-                    <!-- Criação da postagem -->
-                    <div class="row structure-content" id="post-area">
-                        <form>
-                            <div id="post-create" class="row">
-                                <div class="d-none d-lg-block col-lg-1 profile-pic-post pt-2">
-                                    <img src="" alt=""><span><i class="fa-circle-user fa-solid"></i></span>
-                                </div>
-                                <!-- Texto da postagem -->
-                                <div class="col-12 col-lg-11 pt-2 align-self-center">
-                                    <textarea class="form-control" id="post-text" type="text" value="" placeholder="Insira aqui a sua dúvida..." ></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="ms-auto col-2 col-md-1 mt-2 mb-1 me-2 button-style-w">
-                                    <button type="submit" class="btn button-style" value="">Publicar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Exibição da postagem (para exibição, altere a exibição no css para display:block)-->
-                    <div class="row structure-content" id="post-user">
-                        <div class="col-2 profile-pic-post">
-                            <img src="" alt=""><span><i class="fa-circle-user fa-solid"></i></span>
-                        </div>
-                        <div class="col-3 align-self-center">
-                            <span>Nome do Usuário</span>
-                        </div>
-                        <hr>
-                        <div class="col-12 post-content"><p>"Bem-vindo à nossa Central de Aprendizado! Esta é a sua principal fonte para tirar dúvidas e obter respostas rápidas e precisas. Nossa equipe de suporte está sempre pronta para ajudá-lo com qualquer questão que você possa ter. Seja sobre nossos produtos, serviços ou qualquer outro tópico, estamos aqui para fornecer a assistência que você precisa. Utilize nossa plataforma para enviar suas perguntas e receber suporte especializado de forma eficiente. Estamos comprometidos em tornar seu processo de aprendizado mais fácil e direto. Conte conosco para esclarecer suas dúvidas!"</p></div>
-                        <hr>
-                        <div class="col-8 col-sm-9 col-md-10 mb-2 align-self-center">
-                            <input class="form-control" id="comment-section" type="text" placeholder="Escreva um comentário...">
-                        </div>
-                        <div class="col-1 ms-auto mb-2 button-style-w">
-                            <button class="btn button-style" type="submit">Enviar</button>
-                        </div>
-                    </div>
+          <!-- Área de postagem -->
+          <div class="col-12 col-lg-9">
+            <!-- Criação da postagem -->
+            <div class="row structure-content" id="post-area">
+              <form>
+                <div id="post-create" class="row">
+                  <div class="d-none d-lg-block col-lg-1 profile-pic-post pt-2">
+                    <img src="" alt=""><span><i class="fa-circle-user fa-solid"></i></span>
+                  </div>
+                  <!-- Texto da postagem -->
+                  <div class="col-12 col-lg-11 pt-2 align-self-center">
+                    <textarea class="form-control" id="post-text" type="text" value=""
+                      placeholder="O que você deseja compartilhar?"></textarea>
+                  </div>
                 </div>
+                <div class="row">
+                  <div class="ms-auto col-2 col-md-1 mt-2 mb-1 me-2 button-style-w">
+                    <button type="button" class="btn button-style" onclick="publish()">Publicar</button>
+                  </div>
                 </div>
+              </form>
+            </div>
+            <div id="posts-container">
+              <!-- Novos posts serão inseridos aqui -->
+          </div>
+          </div>
+        </div>
     </section>
     <!-- Fim do conteúdo -->
 
@@ -125,8 +109,9 @@
           <div id="links" class="col-12 col-md-5">
             <h5>Links úteis</h5>
             <ul>
-              <li><a href="">Univesp</a></li>
-              <li><a href="">Portal do Aluno</a></li>
+              <li><a href="https://univesp.br/" target="_blank" rel="noopener noreferrer">Univesp</a></li>
+              <li><a href="https://sei.univesp.br/index.xhtml" target="_blank" rel="noopener noreferrer">Portal do
+                  Aluno</a></li>
             </ul>
           </div>
           <div class="col-1 ms-md-auto align-self-center" id="help">
@@ -146,8 +131,22 @@
     crossorigin="anonymous"></script>
 
 
-    <!-- Custom JS -->
+  <!-- Custom JS -->
   <script src="js/main.js"></script>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const name = decodeURIComponent(getQueryParam('name'));
+    const lastName = decodeURIComponent(getQueryParam('lastName'));
+    const course = decodeURIComponent(getQueryParam('course'));
+
+    document.getElementById('name').textContent = name + ' ' + lastName;
+    document.getElementById('course').textContent = course;
+  </script>
 
 </body>
 
